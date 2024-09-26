@@ -6885,7 +6885,7 @@ contract DAOFactory is Initializable, UUPSUpgradeable, OwnableUpgradeable, IDAOF
         bool isMultiSignDAO
     ) external returns (address) {
         // Increment daoId before creating the new DAO
-        daoId++;
+        ++daoId;
         DAO newDAO = new DAO(
             governanceTokenAddress,
             minimumParticipationPercentage,
